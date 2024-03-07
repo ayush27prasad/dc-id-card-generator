@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "701149571549",
+    "firebase_url": "https://nova-schools-default-rtdb.firebaseio.com",
+    "project_id": "nova-schools",
+    "storage_bucket": "nova-schools.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701149571549:android:8f15e5828e9a513970ae34",
+        "android_client_info": {
+          "package_name": "com.kvidcard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCklAgAkDkd2SIcRydnAYlf_zMdf2XDakQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701149571549:android:ccab89b55ed1e3fe70ae34",
+        "android_client_info": {
+          "package_name": "com.markattendancekvdelhi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCklAgAkDkd2SIcRydnAYlf_zMdf2XDakQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
