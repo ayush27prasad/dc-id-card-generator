@@ -133,11 +133,9 @@ public class MainActivity extends AppCompatActivity {
                             processImageUri(imageUri);
                         } else if (data != null && data.getExtras() != null) {
                             // Image captured from camera
-                            Bundle extras = data.getExtras();
-                            Bitmap imageBitmap = (Bitmap) extras.get("data");
+                            Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
                             processImage(imageBitmap);
                         }
-
                     }
                 });
 

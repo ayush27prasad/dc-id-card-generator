@@ -20,6 +20,9 @@ import com.kvidcard.retrofit.RetrofitClient;
 import com.kvidcard.utils.ProgressBarBox;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -95,17 +98,20 @@ public class StudentsListActivity extends AppCompatActivity {
                 ProgressBarBox.dismissProgressDialog();
                 Log.d("onResponse: call",call.toString());
                 Log.d("onResponse: response", response.message() + response.errorBody() + response.toString() + response.body());
-                int rno = 1;
+
                 if(response.body() != null) {
                     for (StudentResponseBodyModel studentResponseBodyModel : response.body()) {
                         studentsList.add(new StudentItemModel(studentResponseBodyModel.getStudentId(),
                                 studentResponseBodyModel.getStudentName(),
-                                Integer.toString(rno++),
+                                "*",
                                 studentResponseBodyModel.getVerified()));
                         studentDetailsList.add(studentResponseBodyModel);
                         Log.d("Student fetched :",studentResponseBodyModel.toString());
-
                     }
+                    studentsList.sort(Comparator.comparing(StudentItemModel::getStudentName));
+                    studentDetailsList.sort(Comparator.comparing(StudentResponseBodyModel::getStudentName));
+                    int rollNo = 1;
+                    for(StudentItemModel studentItemModel : studentsList) studentItemModel.setStudentRollNo(Integer.toString(rollNo++));
 
                 }
                 if(response.body() == null || studentsList.isEmpty()){
